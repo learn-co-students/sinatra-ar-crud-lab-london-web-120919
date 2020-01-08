@@ -1,0 +1,6 @@
+<h1>Welcome Traveler</h1>
+<a href='/articles/new'>Create an article here</a>
+<% @article.each do |art| %>
+    <h2><%= art.title %></h2>
+    <p><%= art.content %></p>
+<% end %>
