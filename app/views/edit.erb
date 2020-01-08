@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>New Article</head>
+<body>
+
+    <nav>
+    <a href='/articles'>All Articles</a>
+    <a href='/articles/new'>New Article</a>
+    </nav>
+
+    <h1>Create a new article</h1>
+
+    <form method="POST" action='/articles/<%= @article.id %>'>
+    <input id="hidden" type="hidden" name="_method" value="patch">
+        <input type=text id="title" name="article[title]" value=<%= @article.title %>><br>
+        <input type=text id="content" name="article[content]" value=<%= @article.content %>><br>
+        <input type=submit id="submit">
+    </form>
+
+</form>
+
+</body>
+</html>

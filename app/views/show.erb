@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>Current Article</head>
+<body>
+    <nav>
+    <a href='/articles'>All Articles</a>
+    <a href='/articles/new'>New Article</a>
+    </nav>
+
+    <h1><%= @article.title %></h1>
+
+    <p><%= @article.content %></p>
+
+    <p><a href="/articles/<%= @article.id %>/edit">Edit Article</a></p>
+
+    <br>
+    <form method="post" action='/articles/<%= @article.id %>'>
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
+        <input type="submit" id="delete" value="delete">
+    </form>
+</body>
+</html>

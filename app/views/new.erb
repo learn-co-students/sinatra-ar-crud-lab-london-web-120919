@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>New Article</head>
+<body>
+
+    <nav>
+    <a href='/articles'>All Articles</a>
+    <a href='/articles/new'>New Article</a>
+    </nav>
+
+    <h1>Create a new article</h1>
+
+    <form method="POST" action='/articles'>
+        <input type=text id="title" name="article[title]" placeholder="Type Title Here"><br>
+        <input type=text id="content" name="article[content]" placeholder="Write your article here!"><br>
+        <input type=submit>
+    </form>
+
+</body>
+</html>
